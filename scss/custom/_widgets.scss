@@ -1,0 +1,66 @@
+@mixin sidebar-nav-link() {
+
+}
+
+@mixin sidebar-nav() {
+
+  margin: 0;
+  padding: 0;
+
+  &, li {
+    list-style: none;
+  }
+
+  li {
+    &:not(:last-child) {
+      border-bottom: 1px solid $gainsboro;
+    }
+
+    &, a {
+      display: block;
+    }
+    a {
+      font-weight: bold;
+      padding: rem-calc(7 15);
+      text-transform: uppercase;
+      font-size: 14px;
+      &:hover {
+        background: $silver
+      }
+    }
+
+    ul {
+      li {
+        border: none !important;
+        a {
+          text-transform: none;
+          font-weight: normal;
+          padding: rem-calc(5 15);
+        }
+
+        ul {
+          margin-left: rem-calc(15);
+        }
+      }
+    }
+  }
+
+}
+
+.widget {
+  margin-bottom: 20px;
+
+  .widget-title {
+    font-size: rem-calc(12);
+    font-weight: normal;
+    padding: rem-calc(5 15);
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+.widget_pages, .gc-kit-child-pages {
+  ul {
+    @include sidebar-nav;
+  }
+}

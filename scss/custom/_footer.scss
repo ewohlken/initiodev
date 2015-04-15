@@ -1,0 +1,21 @@
+.footer {
+  background: $oil;
+  padding: rem-calc(20 0);
+
+  &, h1, h2, h3, h4, h5, h6, a, p, span, li {
+    color: $gainsboro;
+  }
+
+  span, li, p {
+    margin-bottom: 0;
+    font-size: rem-calc(14)
+  }
+  h4 {
+    display: none
+  }
+
+  .widget {
+    margin: 0;
+  }
+
+}

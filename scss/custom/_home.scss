@@ -1,0 +1,70 @@
+$hero-width: 1920px;
+$hero-height: 500px;
+
+.hero {
+  display: none;
+
+  // This makes it so that this entire thing is only shown on larger screens
+  @media #{$medium-up} {
+    display: block;
+  }
+
+  .slider {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slide {
+    // Position is set so that the background image doesn't affect the height of the slide
+    position: relative;
+
+    // This is set to 0 because the height is set to padding bottom
+    height: 0;
+
+    // Here we set the padding to a percentage as it's a ratio
+    padding-bottom: percentage($hero-height / $hero-width);
+    overflow: hidden;
+
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+
+      // Set this to the sites's max width
+      max-width: $row-width;
+
+      //Setting the left and right margin to auto will center the content
+      margin-left: auto;
+      margin-right: auto;
+
+      @media #{$medium-up}{
+        padding-top: 7%;
+      }
+
+      &, h2, h5 {
+        color: $white;
+      }
+
+      h2 {
+        font-size: rem-calc(48);
+        font-weight: bold;
+        margin: 0
+      }
+
+      h5 {
+        margin: rem-calc(0 0 25 0);
+        font-size: rem-calc(24);
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.entries {
+  padding-bottom: rem-calc(25);
+
+  .entry .entry-header {
+    padding-bottom: rem-calc(20);
+
+    // This will hide the tags and categories on the entries listing only for the header
+    .cat-links, .tags-links, .sticky-post {
+      display: none;
+    }
+  }
+}
+
+.entry {
+  position: relative;
+
+  & + .entry {
+    padding-top: rem-calc(60);
+  }
+
+  .entry-header {
+    font-size: rem-calc(13);
+    padding-bottom: rem-calc(30);
+
+    .entry-title {
+      font-size: rem-calc(24);
+    }
+
+    .tags-links {
+      display: none;
+    }
+
+    .cat-links {
+      float: right;
+      text-align: right;
+    }
+  }
+
+  .post-thumbnail {
+    margin-bottom: rem-calc(20);
+
+    &, img {
+      display: block;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .entry-content {
+    padding-bottom: rem-calc(20);
+  }
+
+  .entry-footer {
+    padding-top: rem-calc(20);
+    border-top: 1px solid $gainsboro;
+    font-size: rem-calc(13);
+    position: relative;
+
+    // We don't want to show these on the footer
+    .byline, .posted-on, .sticky-post {
+      display: none;
+    }
+
+    .cats-links, .tags-links {
+      display: block;
+      width: 100%;
+      float: none;
+
+      @media #{$medium-up}{
+        width: 48%;
+      }
+    }
+
+    @media #{$medium-up}{
+      .cat-links {
+        float: left;
+      }
+
+      .tags-links {
+        text-align: right;
+        float: right;
+      }
+    }
+
+  }
+
+  .entry-header, .entry-footer {
+    @include clearfix
+  }
+
+  .sticky-post {
+    font-size: rem-calc(10);
+    text-transform: uppercase;
+    border: 1px solid $gainsboro;
+    border-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1;
+    padding: rem-calc(2 7);
+  }
+
+  // sets a delimiter betweent he date and the author
+  .author {
+    &:before {
+      content: " / "
+    }
+    > span {
+      text-transform: lowercase
+    }
+  }
+
+  .categories {
+
+  }
+}

@@ -1,0 +1,18 @@
+// This is a class used by some of the WordPress default functions
+// The code that follows it hides it as it is meant only to be shown to screen readers and not other devices
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
+// The main content wrapper for the site.
+.content {
+  padding: rem-calc(15 0 0 0);
+
+  @media #{$medium-up} {
+    padding: rem-calc(30 0 0 0);
+  }
+}
