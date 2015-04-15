@@ -1,15 +1,15 @@
-# GoldenComm 2015 WordPress Baseline Theme
+# Initiodev 2015 WordPress Baseline Theme
 
-This is the WordPress baseline theme for GoldenComm 2015. This theme uses Foundation as its base for CSS and JavaScript Libraries
+This is the WordPress baseline theme for Initiodev 2015. This theme uses Foundation as its base for CSS and JavaScript Libraries
 
 ## Getting Started
 First you will need to open your Git Bash or OS Terminal. Clone this repository to your themes folder ( **Note:** Before all of this, it is recommended that you set up an SSH key with BitBucket in order to have a secure connection without being bothered to put in your password)
 
 
     cd wp-content/themes/
-    git clone git@bitbucket.org:goldencomm/gc15.git
+    git clone git@github.com:ewohlken/initiodev.git
  
-The current version of GoldenComm's WordPress baseline uses Bower, Gulp and Foundation. You'll need to run the following in your terminal:
+The current version of Initiodev's WordPress baseline uses Bower, Gulp and Foundation. You'll need to run the following in your terminal:
 
 
     npm install
